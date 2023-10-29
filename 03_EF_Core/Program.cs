@@ -3,9 +3,12 @@
 using var ctx = new MyDbContext();
 // await initT_Books(ctx);
 
-// await TestQuery(ctx);
+var guid = Guid.NewGuid();
+System.Console.WriteLine($"guid:{guid}");
 
-await TestUpdateAndDelete(ctx);
+await TestQuery(ctx);
+
+// await TestUpdateAndDelete(ctx);
 
 static async Task TestUpdateAndDelete(MyDbContext ctx)
 {
